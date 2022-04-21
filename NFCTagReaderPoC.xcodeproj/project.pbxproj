@@ -15,6 +15,7 @@
 		E617368F281195BB0012CDF2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E617368D281195BB0012CDF2 /* LaunchScreen.storyboard */; };
 		E6173697281195F50012CDF2 /* MessagesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6173696281195F50012CDF2 /* MessagesTableViewController.swift */; };
 		E6173699281196230012CDF2 /* MessagesTableViewController+DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6173698281196230012CDF2 /* MessagesTableViewController+DataSource.swift */; };
+		E617369E2811BC130012CDF2 /* PayloadsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E617369D2811BC130012CDF2 /* PayloadsTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		E6173696281195F50012CDF2 /* MessagesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesTableViewController.swift; sourceTree = "<group>"; };
 		E6173698281196230012CDF2 /* MessagesTableViewController+DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MessagesTableViewController+DataSource.swift"; sourceTree = "<group>"; };
 		E617369C281196F80012CDF2 /* NFCTagReaderPoC.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = NFCTagReaderPoC.entitlements; sourceTree = "<group>"; };
+		E617369D2811BC130012CDF2 /* PayloadsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PayloadsTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 				E617369C281196F80012CDF2 /* NFCTagReaderPoC.entitlements */,
 				E6173682281195B90012CDF2 /* AppDelegate.swift */,
 				E6173684281195B90012CDF2 /* SceneDelegate.swift */,
+				E617369D2811BC130012CDF2 /* PayloadsTableViewController.swift */,
 				E6173696281195F50012CDF2 /* MessagesTableViewController.swift */,
 				E6173698281196230012CDF2 /* MessagesTableViewController+DataSource.swift */,
 				E6173686281195B90012CDF2 /* ViewController.swift */,
@@ -146,6 +149,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E617369E2811BC130012CDF2 /* PayloadsTableViewController.swift in Sources */,
 				E6173687281195B90012CDF2 /* ViewController.swift in Sources */,
 				E6173699281196230012CDF2 /* MessagesTableViewController+DataSource.swift in Sources */,
 				E6173697281195F50012CDF2 /* MessagesTableViewController.swift in Sources */,

@@ -47,6 +47,9 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="BUJ-9f-rmv" kind="show" id="6FY-Tk-yMw"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -67,6 +70,50 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zdU-nc-bhE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="453" y="177"/>
+        </scene>
+        <!--Tag Payloads-->
+        <scene sceneID="7hP-bO-JLE">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="K0n-oi-gTC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tableViewController id="BUJ-9f-rmv" customClass="PayloadsTableViewController" customModule="NFCTagReaderPoC" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="jca-V7-4fB">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="reuseIdentifier" textLabel="pmc-RG-LAG" style="IBUITableViewCellStyleDefault" id="mqQ-k6-tPs">
+                                <rect key="frame" x="0.0" y="44.5" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="mqQ-k6-tPs" id="Gnd-WX-off">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="pmc-RG-LAG">
+                                            <rect key="frame" x="20" y="0.0" width="374" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="BUJ-9f-rmv" id="xJ4-xN-p3n"/>
+                            <outlet property="delegate" destination="BUJ-9f-rmv" id="ZhG-Cy-0Cb"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Tag Payloads" id="BcB-5c-8hV">
+                        <barButtonItem key="rightBarButtonItem" title="Write" id="KQK-4m-1Ne">
+                            <connections>
+                                <action selector="beginWrite:" destination="BUJ-9f-rmv" id="jS1-wa-4z3"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+            </objects>
+            <point key="canvasLocation" x="1194" y="177"/>
         </scene>
     </scenes>
 </document>

@@ -25,5 +25,14 @@ extension MessagesTableViewController {
 
         return cell
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let indexPath = tableView.indexPathForSelectedRow,
+            let payloadsTableViewController = segue.destination as? PayloadsTableViewController else {
+            return
+        }
+        payloadsTableViewController.message = detectedMessages[indexPath.row]
+    }
+
 
 }
