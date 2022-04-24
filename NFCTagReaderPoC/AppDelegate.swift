@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  NFCTagReaderPoC
 //
-//  Created by bv-empower on 21/4/22.
+//  Created by Mamun Ar Rashid on 21/4/22.
 //
 
 import UIKit
@@ -18,6 +18,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             return false
         }
 
+        // Confirm that the NSUserActivity object contains a valid NDEF message.
+        let ndefMessage = userActivity.ndefMessagePayload
+        guard !ndefMessage.records.isEmpty,
+            ndefMessage.records[0].typeNameFormat != .empty else {
+                return false
+        }
+
+        // Send the message to `MessagesTableViewController` for processing.
+        guard let navigationController = window?.rootViewController as? UINavigationController else {
+            return false
+        }
+
+        navigationController.popToRootViewController(animated: true)
+        let messageTableViewController = navigationController.topViewController as? MessagesTableViewController
+        messageTableViewController?.addMessage(fromUserActivity: ndefMessage)
 
         return true
     }

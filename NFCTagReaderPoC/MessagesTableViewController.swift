@@ -7,6 +7,7 @@
 
 import UIKit
 import CoreNFC
+import PassKit
 
 /// - Tag: MessagesTableViewController
 class MessagesTableViewController: UITableViewController, NFCNDEFReaderSessionDelegate {
@@ -17,6 +18,17 @@ class MessagesTableViewController: UITableViewController, NFCNDEFReaderSessionDe
     var detectedMessages = [NFCNDEFMessage]()
     var session: NFCNDEFReaderSession?
 
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        PassKitHelper.enableApplePay()
+        showPass()
+    }
+    
+    func showPass() {
+       
+      }
+    
     // MARK: - Actions
 
     /// - Tag: beginScanning
@@ -68,7 +80,7 @@ class MessagesTableViewController: UITableViewController, NFCNDEFReaderSessionDe
                 session.invalidate()
                 return
             }
-            
+             
             tag.queryNDEFStatus(completionHandler: { (ndefStatus: NFCNDEFStatus, capacity: Int, error: Error?) in
                 if .notSupported == ndefStatus {
                     session.alertMessage = "Tag is not NDEF compliant"

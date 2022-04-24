@@ -74,7 +74,6 @@
         <!--Tag Payloads-->
         <scene sceneID="7hP-bO-JLE">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="K0n-oi-gTC" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController id="BUJ-9f-rmv" customClass="PayloadsTableViewController" customModule="NFCTagReaderPoC" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="jca-V7-4fB">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -112,6 +111,7 @@
                         </barButtonItem>
                     </navigationItem>
                 </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="K0n-oi-gTC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1194" y="177"/>
         </scene>

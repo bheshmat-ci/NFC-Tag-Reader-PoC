@@ -16,6 +16,9 @@
 		E6173697281195F50012CDF2 /* MessagesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6173696281195F50012CDF2 /* MessagesTableViewController.swift */; };
 		E6173699281196230012CDF2 /* MessagesTableViewController+DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6173698281196230012CDF2 /* MessagesTableViewController+DataSource.swift */; };
 		E617369E2811BC130012CDF2 /* PayloadsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E617369D2811BC130012CDF2 /* PayloadsTableViewController.swift */; };
+		E61736A028142CB90012CDF2 /* PassKitHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E617369F28142CB80012CDF2 /* PassKitHelper.swift */; };
+		E65EEAF32815675100054645 /* PassKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E65EEAF22815675100054645 /* PassKit.framework */; };
+		E65EEAF82815DA4700054645 /* PassLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65EEAF72815DA4700054645 /* PassLibrary.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +34,9 @@
 		E6173698281196230012CDF2 /* MessagesTableViewController+DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MessagesTableViewController+DataSource.swift"; sourceTree = "<group>"; };
 		E617369C281196F80012CDF2 /* NFCTagReaderPoC.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = NFCTagReaderPoC.entitlements; sourceTree = "<group>"; };
 		E617369D2811BC130012CDF2 /* PayloadsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PayloadsTableViewController.swift; sourceTree = "<group>"; };
+		E617369F28142CB80012CDF2 /* PassKitHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassKitHelper.swift; sourceTree = "<group>"; };
+		E65EEAF22815675100054645 /* PassKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PassKit.framework; path = System/Library/Frameworks/PassKit.framework; sourceTree = SDKROOT; };
+		E65EEAF72815DA4700054645 /* PassLibrary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassLibrary.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +44,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E65EEAF32815675100054645 /* PassKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -49,6 +56,7 @@
 			children = (
 				E6173681281195B90012CDF2 /* NFCTagReaderPoC */,
 				E6173680281195B90012CDF2 /* Products */,
+				E65EEAF12815675100054645 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -69,13 +77,23 @@
 				E617369D2811BC130012CDF2 /* PayloadsTableViewController.swift */,
 				E6173696281195F50012CDF2 /* MessagesTableViewController.swift */,
 				E6173698281196230012CDF2 /* MessagesTableViewController+DataSource.swift */,
+				E617369F28142CB80012CDF2 /* PassKitHelper.swift */,
 				E6173686281195B90012CDF2 /* ViewController.swift */,
 				E6173688281195B90012CDF2 /* Main.storyboard */,
 				E617368B281195BB0012CDF2 /* Assets.xcassets */,
 				E617368D281195BB0012CDF2 /* LaunchScreen.storyboard */,
 				E6173690281195BB0012CDF2 /* Info.plist */,
+				E65EEAF72815DA4700054645 /* PassLibrary.swift */,
 			);
 			path = NFCTagReaderPoC;
+			sourceTree = "<group>";
+		};
+		E65EEAF12815675100054645 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E65EEAF22815675100054645 /* PassKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -149,6 +167,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E65EEAF82815DA4700054645 /* PassLibrary.swift in Sources */,
+				E61736A028142CB90012CDF2 /* PassKitHelper.swift in Sources */,
 				E617369E2811BC130012CDF2 /* PayloadsTableViewController.swift in Sources */,
 				E6173687281195B90012CDF2 /* ViewController.swift in Sources */,
 				E6173699281196230012CDF2 /* MessagesTableViewController+DataSource.swift in Sources */,
@@ -313,6 +333,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -343,6 +364,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
