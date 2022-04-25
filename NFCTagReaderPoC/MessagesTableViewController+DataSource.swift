@@ -26,12 +26,20 @@ extension MessagesTableViewController {
         return cell
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let indexPath = tableView.indexPathForSelectedRow,
-            let payloadsTableViewController = segue.destination as? PayloadsTableViewController else {
-            return
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if let payloadsTableViewController = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "PayloadsViewController") as? PayloadsViewController {
+            payloadsTableViewController.message = detectedMessages[indexPath.row]
+            self.navigationController?.show(payloadsTableViewController, sender: nil)
         }
-        payloadsTableViewController.message = detectedMessages[indexPath.row]
+      
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        guard let indexPath = tableView.indexPathForSelectedRow,
+//            let payloadsTableViewController = segue.destination as? PayloadsTableViewController else {
+//            return
+//        }
+        //payloadsTableViewController.message = detectedMessages[indexPath.row]
     }
 
 

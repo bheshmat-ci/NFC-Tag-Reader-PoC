@@ -43,7 +43,12 @@ class MessagesTableViewController: UITableViewController, NFCNDEFReaderSessionDe
             self.present(alertController, animated: true, completion: nil)
             return
         }
+        guard NFCNDEFReaderSession.readingAvailable else {
+                       return
+                   }
 
+                   //readerSession1 = NFCTagReaderSession(pollingOption:  [.iso14443, .iso15693, .iso18092], delegate: self, queue: nil)
+                
         session = NFCNDEFReaderSession(delegate: self, queue: nil, invalidateAfterFirstRead: false)
         session?.alertMessage = "Hold your iPhone near the item to learn more about it."
         session?.begin()
@@ -55,8 +60,12 @@ class MessagesTableViewController: UITableViewController, NFCNDEFReaderSessionDe
     func readerSession(_ session: NFCNDEFReaderSession, didDetectNDEFs messages: [NFCNDEFMessage]) {
         DispatchQueue.main.async {
             // Process detected NFCNDEFMessage objects.
-            self.detectedMessages.append(contentsOf: messages)
-            self.tableView.reloadData()
+            //self.detectedMessages.append(contentsOf: messages)
+            //self.tableView.reloadData()
+            if let message = messages.first, let payloadsTableViewController = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "PayloadsViewController") as? PayloadsViewController {
+                payloadsTableViewController.message = message
+                self.navigationController?.show(payloadsTableViewController, sender: nil)
+            }
         }
     }
 
@@ -100,8 +109,12 @@ class MessagesTableViewController: UITableViewController, NFCNDEFReaderSessionDe
                         statusMessage = "Found 1 NDEF message"
                         DispatchQueue.main.async {
                             // Process detected NFCNDEFMessage objects.
-                            self.detectedMessages.append(message!)
-                            self.tableView.reloadData()
+//                            self.detectedMessages.append(message!)
+//                            self.tableView.reloadData()
+                            if let message = message, let payloadsTableViewController = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "PayloadsViewController") as? PayloadsViewController {
+                                payloadsTableViewController.message = message
+                                self.navigationController?.show(payloadsTableViewController, sender: nil)
+                            }
                         }
                     }
                     

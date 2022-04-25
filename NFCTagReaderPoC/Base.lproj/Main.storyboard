@@ -2,7 +2,10 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zbn-ZY-NOq">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -47,9 +50,6 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
-                                <connections>
-                                    <segue destination="BUJ-9f-rmv" kind="show" id="6FY-Tk-yMw"/>
-                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -71,23 +71,68 @@
             </objects>
             <point key="canvasLocation" x="453" y="177"/>
         </scene>
-        <!--Tag Payloads-->
-        <scene sceneID="7hP-bO-JLE">
+        <!--Payloads View Controller-->
+        <scene sceneID="TFu-Wp-fOd">
             <objects>
-                <tableViewController id="BUJ-9f-rmv" customClass="PayloadsTableViewController" customModule="NFCTagReaderPoC" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="jca-V7-4fB">
+                <viewController storyboardIdentifier="PayloadsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="1e1-sZ-d6y" customClass="PayloadsViewController" customModule="NFCTagReaderPoC" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="N1c-kj-LES">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NFC  Tag ID" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PzA-6C-UJS">
+                                <rect key="frame" x="20" y="64" width="155" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="9JP-Zi-dQB"/>
+                                    <constraint firstAttribute="width" constant="155" id="O7d-YI-8Q7"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IBu-I1-EVe">
+                                <rect key="frame" x="20" y="124" width="364" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="cVP-he-Db7"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="KZC-Wt-6z4"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="IBu-I1-EVe" firstAttribute="top" secondItem="PzA-6C-UJS" secondAttribute="bottom" constant="20" id="3ZO-XG-4YW"/>
+                            <constraint firstItem="PzA-6C-UJS" firstAttribute="leading" secondItem="KZC-Wt-6z4" secondAttribute="leading" constant="20" id="F6D-Ug-sEr"/>
+                            <constraint firstItem="KZC-Wt-6z4" firstAttribute="trailing" secondItem="IBu-I1-EVe" secondAttribute="trailing" constant="30" id="d6u-gQ-WLp"/>
+                            <constraint firstItem="PzA-6C-UJS" firstAttribute="top" secondItem="KZC-Wt-6z4" secondAttribute="top" constant="20" id="ofW-l3-FG5"/>
+                            <constraint firstItem="IBu-I1-EVe" firstAttribute="leading" secondItem="KZC-Wt-6z4" secondAttribute="leading" constant="20" id="sM4-Y0-5SW"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tagDataTextField" destination="IBu-I1-EVe" id="tp4-Y5-jmm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yIZ-g1-mg5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1218.840579710145" y="176.78571428571428"/>
+        </scene>
+        <!--Tag Payloads-->
+        <scene sceneID="sw6-vw-GRn">
+            <objects>
+                <tableViewController storyboardIdentifier="PayloadsTableViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="VWd-yU-2pA" customClass="PayloadsTableViewController" customModule="NFCTagReaderPoC" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="iIZ-Zv-sO3">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="reuseIdentifier" textLabel="pmc-RG-LAG" style="IBUITableViewCellStyleDefault" id="mqQ-k6-tPs">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="reuseIdentifier" textLabel="SZX-F3-c2s" style="IBUITableViewCellStyleDefault" id="2XF-0w-drd">
                                 <rect key="frame" x="0.0" y="44.5" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="mqQ-k6-tPs" id="Gnd-WX-off">
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="2XF-0w-drd" id="bda-2J-Ace">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="pmc-RG-LAG">
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="SZX-F3-c2s">
                                             <rect key="frame" x="20" y="0.0" width="374" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -99,21 +144,26 @@
                             </tableViewCell>
                         </prototypes>
                         <connections>
-                            <outlet property="dataSource" destination="BUJ-9f-rmv" id="xJ4-xN-p3n"/>
-                            <outlet property="delegate" destination="BUJ-9f-rmv" id="ZhG-Cy-0Cb"/>
+                            <outlet property="dataSource" destination="VWd-yU-2pA" id="o71-Ee-wSd"/>
+                            <outlet property="delegate" destination="VWd-yU-2pA" id="Xod-aN-FNP"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Tag Payloads" id="BcB-5c-8hV">
-                        <barButtonItem key="rightBarButtonItem" title="Write" id="KQK-4m-1Ne">
+                    <navigationItem key="navigationItem" title="Tag Payloads" id="Dge-E2-qXw">
+                        <barButtonItem key="rightBarButtonItem" title="Write" id="ErG-tM-AZM">
                             <connections>
-                                <action selector="beginWrite:" destination="BUJ-9f-rmv" id="jS1-wa-4z3"/>
+                                <action selector="beginWrite:" destination="VWd-yU-2pA" id="1xT-kH-8SE"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                 </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="K0n-oi-gTC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="s9r-UD-W4O" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1194" y="177"/>
+            <point key="canvasLocation" x="2025" y="177"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

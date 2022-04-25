@@ -32,6 +32,8 @@ class PayloadsTableViewController: UITableViewController, NFCNDEFReaderSessionDe
     var message: NFCNDEFMessage = .init(records: [])
     var session: NFCNDEFReaderSession?
 
+    
+    
     // MARK: - Table View Data Source
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
