@@ -10,40 +10,74 @@ import UIKit
 import CoreNFC
 
 
-class PayloadsViewController: UIViewController {
+class PayloadsViewController: UIViewController, UITextFieldDelegate {
 
       @IBOutlet var tagDataTextField: UITextField!
    
     var message: NFCNDEFMessage = .init(records: [])
     var session: NFCNDEFReaderSession?
-    
+    var isTagWrite: Bool = false
 
     @IBAction func writeButtonTapped(_ sender: Any) {
+        isTagWrite = true
         session = NFCNDEFReaderSession(delegate: self, queue: nil, invalidateAfterFirstRead: false)
         session?.alertMessage = "Hold your iPhone near an NDEF tag to write the message."
         session?.begin()
     }
     
+    /// - Tag: beginScanning
+    @IBAction func beginScanning(_ sender: Any) {
+        
+        isTagWrite = false
+        
+        guard NFCNDEFReaderSession.readingAvailable else {
+            let alertController = UIAlertController(
+                title: "Scanning Not Supported",
+                message: "This device doesn't support tag scanning.",
+                preferredStyle: .alert
+            )
+            alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            self.present(alertController, animated: true, completion: nil)
+            return
+        }
+        
+        guard NFCNDEFReaderSession.readingAvailable else {
+                       return
+                   }
 
+                   //readerSession1 = NFCTagReaderSession(pollingOption:  [.iso14443, .iso15693, .iso18092], delegate: self, queue: nil)
+                
+        session = NFCNDEFReaderSession(delegate: self, queue: nil, invalidateAfterFirstRead: false)
+        session?.alertMessage = "Hold your iPhone near the item to learn more about it."
+        session?.begin()
+    }
+    
+ 
     override func viewDidLoad() {
         super.viewDidLoad()
 
+    
+        // Do any additional setup after loading the view.
+        showNFCTagData()
+        tagDataTextField.delegate = self
+        tagDataTextField.returnKeyType = .done
+     }
+    
+     func textFieldShouldReturn(_ textField: UITextField) -> Bool
+     {
+         textField.resignFirstResponder()
+         return true
+     }
+    
+    func showNFCTagData ()  {
         if let payload = message.records.first {
         
         switch payload.typeNameFormat {
         case .nfcWellKnown:
                 if let data = String(data: payload.payload, encoding: .utf8) {
                     tagDataTextField.text = "\(data)"
-//                if let url = payload.wellKnownTypeURIPayload() {
-//                    tagDataTextField.text = "\(payload.typeNameFormat.description): \(type), \(url.absoluteString)"
-//                } else {
-//                    tagDataTextField.text = "\(data)"
-//                }
             }
         case .absoluteURI:
-//            if let text = String(data: payload.payload, encoding: .utf8) {
-//                tagDataTextField.text = text
-//            }
                 if let data = String(data: payload.payload, encoding: .utf8) {
                     tagDataTextField.text = "\(data)"
                 }
@@ -59,17 +93,14 @@ class PayloadsViewController: UIViewController {
                 }
         }
         }
-        // Do any additional setup after loading the view.
     }
-
-
-
 }
 
 extension PayloadsViewController: NFCNDEFReaderSessionDelegate {
 // MARK: - NFCNDEFReaderSessionDelegate
 
 func readerSession(_ session: NFCNDEFReaderSession, didDetectNDEFs messages: [NFCNDEFMessage]) {
+
 }
 
 /// - Tag: writeToTag
@@ -99,23 +130,70 @@ func readerSession(_ session: NFCNDEFReaderSession, didDetect tags: [NFCNDEFTag]
                 session.invalidate()
                 return
             }
+            
+            if !self.isTagWrite {
+                tag.readNDEF(completionHandler: { (message: NFCNDEFMessage?, error: Error?) in
+                    var statusMessage: String
+                    if nil != error || nil == message {
+                        statusMessage = "Fail to read NDEF from tag"
+                    } else {
+                        statusMessage = "Found 1 NDEF message"
+                        DispatchQueue.main.async {
+                            if let message = message {
+                            self.message = message
+                            self.showNFCTagData()
+                            }
+                            // Process detected NFCNDEFMessage objects.
+//                            self.detectedMessages.append(message!)
+//                            self.tableView.reloadData()
+                        }
+                    }
+                    
+                    session.alertMessage = statusMessage
+                    session.invalidate()
+                })
+                
+            }
 
             switch ndefStatus {
             case .notSupported:
                 session.alertMessage = "Tag is not NDEF compliant."
                 session.invalidate()
             case .readOnly:
+                    DispatchQueue.main.async {
                 session.alertMessage = "Tag is read only."
                 session.invalidate()
+                    }
             case .readWrite:
-                tag.writeNDEF(self.message, completionHandler: { (error: Error?) in
+                    DispatchQueue.main.async {
+                        
+                    
+                    if self.isTagWrite {
+                if  let text = self.tagDataTextField.text {
+                    var payloadData = Data([0x02])
+                    payloadData.append(text.data(using: .utf8)!)
+
+                    let payload = NFCNDEFPayload.init(
+                        format: NFCTypeNameFormat.nfcWellKnown,
+                        type: "T".data(using: .utf8)!,
+                        identifier: Data.init(count: 0),
+                        payload: payloadData,
+                        chunkSize: 0)
+
+                    let writeData = NFCNDEFMessage(records: [payload])
+                    
+                tag.writeNDEF(writeData, completionHandler: { (error: Error?) in
                     if nil != error {
                         session.alertMessage = "Write NDEF message fail: \(error!)"
                     } else {
                         session.alertMessage = "Write NDEF message successful."
                     }
                     session.invalidate()
-                })
+                })}
+                    } else {
+                      
+                    }
+                    }
             @unknown default:
                 session.alertMessage = "Unknown NDEF tag status."
                 session.invalidate()

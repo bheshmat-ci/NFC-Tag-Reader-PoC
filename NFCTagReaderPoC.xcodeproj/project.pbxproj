@@ -20,6 +20,7 @@
 		E65EEAF32815675100054645 /* PassKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E65EEAF22815675100054645 /* PassKit.framework */; };
 		E65EEAF82815DA4700054645 /* PassLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65EEAF72815DA4700054645 /* PassLibrary.swift */; };
 		E65EEAFA2816E4EE00054645 /* PayloadsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65EEAF92816E4EE00054645 /* PayloadsViewController.swift */; };
+		E65EEAFC281818C700054645 /* AppManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65EEAFB281818C500054645 /* AppManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,7 @@
 		E65EEAF22815675100054645 /* PassKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PassKit.framework; path = System/Library/Frameworks/PassKit.framework; sourceTree = SDKROOT; };
 		E65EEAF72815DA4700054645 /* PassLibrary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassLibrary.swift; sourceTree = "<group>"; };
 		E65EEAF92816E4EE00054645 /* PayloadsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayloadsViewController.swift; sourceTree = "<group>"; };
+		E65EEAFB281818C500054645 /* AppManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +76,7 @@
 			isa = PBXGroup;
 			children = (
 				E617369C281196F80012CDF2 /* NFCTagReaderPoC.entitlements */,
+				E65EEAFB281818C500054645 /* AppManager.swift */,
 				E6173682281195B90012CDF2 /* AppDelegate.swift */,
 				E65EEAF92816E4EE00054645 /* PayloadsViewController.swift */,
 				E6173684281195B90012CDF2 /* SceneDelegate.swift */,
@@ -171,6 +174,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E65EEAF82815DA4700054645 /* PassLibrary.swift in Sources */,
+				E65EEAFC281818C700054645 /* AppManager.swift in Sources */,
 				E65EEAFA2816E4EE00054645 /* PayloadsViewController.swift in Sources */,
 				E61736A028142CB90012CDF2 /* PassKitHelper.swift in Sources */,
 				E617369E2811BC130012CDF2 /* PayloadsTableViewController.swift in Sources */,

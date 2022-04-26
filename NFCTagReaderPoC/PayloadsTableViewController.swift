@@ -117,6 +117,24 @@ class PayloadsTableViewController: UITableViewController, NFCNDEFReaderSessionDe
                     session.invalidate()
                     return
                 }
+                
+                tag.readNDEF(completionHandler: { (message: NFCNDEFMessage?, error: Error?) in
+                    var statusMessage: String
+                    if nil != error || nil == message {
+                        statusMessage = "Fail to read NDEF from tag"
+                    } else {
+                        statusMessage = "Found 1 NDEF message"
+                        DispatchQueue.main.async {
+                            
+                            // Process detected NFCNDEFMessage objects.
+//                            self.detectedMessages.append(message!)
+//                            self.tableView.reloadData()
+                        }
+                    }
+                    
+                    session.alertMessage = statusMessage
+                    session.invalidate()
+                })
 
                 switch ndefStatus {
                 case .notSupported:

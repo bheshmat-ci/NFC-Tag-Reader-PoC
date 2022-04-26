@@ -17,7 +17,7 @@ class MessagesTableViewController: UITableViewController, NFCNDEFReaderSessionDe
     let reuseIdentifier = "reuseIdentifier"
     var detectedMessages = [NFCNDEFMessage]()
     var session: NFCNDEFReaderSession?
-
+    var isTagRead: Bool = true
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,6 +33,7 @@ class MessagesTableViewController: UITableViewController, NFCNDEFReaderSessionDe
 
     /// - Tag: beginScanning
     @IBAction func beginScanning(_ sender: Any) {
+        isTagRead = true
         guard NFCNDEFReaderSession.readingAvailable else {
             let alertController = UIAlertController(
                 title: "Scanning Not Supported",
