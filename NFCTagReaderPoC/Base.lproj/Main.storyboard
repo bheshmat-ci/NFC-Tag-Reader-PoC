@@ -86,10 +86,10 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J3g-qx-uDO">
-                                <rect key="frame" x="269" y="59" width="115" height="38"/>
+                                <rect key="frame" x="268" y="59" width="118" height="38"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Write Tag">
+                                <buttonConfiguration key="configuration" style="filled" title="Write Data">
                                     <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="19"/>
                                 </buttonConfiguration>
                                 <connections>
@@ -113,9 +113,12 @@
                                     <constraint firstAttribute="height" constant="38" id="vzn-5c-7Fy"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Load Data From API">
+                                <buttonConfiguration key="configuration" style="filled" title="Upload Data To API">
                                     <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="19"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="uploadDataToAPI:" destination="1e1-sZ-d6y" eventType="touchUpInside" id="NRE-t7-Kf8"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y0O-jL-XKf">
                                 <rect key="frame" x="90" y="342.5" width="234" height="38"/>
@@ -128,19 +131,22 @@
                                 </buttonConfiguration>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UAt-17-m4N">
-                                <rect key="frame" x="20" y="58" width="115" height="38"/>
+                                <rect key="frame" x="20" y="58" width="150" height="38"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="115" id="bC3-u6-6pX"/>
+                                    <constraint firstAttribute="width" constant="150" id="bC3-u6-6pX"/>
                                     <constraint firstAttribute="height" constant="38" id="lEO-f9-TlA"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Read Tag">
+                                <buttonConfiguration key="configuration" style="filled" title="Scan NFC Tag">
                                     <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="19"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="beginScanning:" destination="1e1-sZ-d6y" eventType="touchUpInside" id="P3u-Ei-HBp"/>
                                 </connections>
                             </button>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="ZgT-vu-qk2">
+                                <rect key="frame" x="20" y="44" width="374" height="818"/>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="KZC-Wt-6z4"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -154,13 +160,18 @@
                             <constraint firstItem="UAt-17-m4N" firstAttribute="leading" secondItem="KZC-Wt-6z4" secondAttribute="leading" constant="20" id="hYO-Fs-XlL"/>
                             <constraint firstItem="Y0O-jL-XKf" firstAttribute="top" secondItem="wNY-vj-BkE" secondAttribute="bottom" constant="73" id="mYJ-2d-Ijh"/>
                             <constraint firstItem="IBu-I1-EVe" firstAttribute="leading" secondItem="KZC-Wt-6z4" secondAttribute="leading" constant="20" id="pLG-xY-9Cj"/>
+                            <constraint firstItem="ZgT-vu-qk2" firstAttribute="leading" secondItem="KZC-Wt-6z4" secondAttribute="leading" constant="20" id="q58-wa-u6L"/>
                             <constraint firstItem="IBu-I1-EVe" firstAttribute="top" secondItem="PzA-6C-UJS" secondAttribute="bottom" constant="15" id="rEY-U8-mUX"/>
                             <constraint firstItem="wNY-vj-BkE" firstAttribute="leading" secondItem="KZC-Wt-6z4" secondAttribute="leading" constant="90" id="u6L-VR-eoN"/>
+                            <constraint firstItem="KZC-Wt-6z4" firstAttribute="trailing" secondItem="ZgT-vu-qk2" secondAttribute="trailing" constant="20" id="u7F-Ap-JzR"/>
+                            <constraint firstItem="ZgT-vu-qk2" firstAttribute="top" secondItem="KZC-Wt-6z4" secondAttribute="top" id="u8l-de-bHy"/>
+                            <constraint firstItem="ZgT-vu-qk2" firstAttribute="bottom" secondItem="KZC-Wt-6z4" secondAttribute="bottom" id="uMh-hW-ChX"/>
                             <constraint firstItem="wNY-vj-BkE" firstAttribute="top" secondItem="IBu-I1-EVe" secondAttribute="bottom" constant="31.5" id="vTT-Es-id4"/>
                             <constraint firstItem="KZC-Wt-6z4" firstAttribute="trailing" secondItem="Y0O-jL-XKf" secondAttribute="trailing" constant="90" id="wvW-ko-vSv"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="activityIndicator" destination="ZgT-vu-qk2" id="9rg-V0-Nu8"/>
                         <outlet property="tagDataTextField" destination="IBu-I1-EVe" id="tp4-Y5-jmm"/>
                     </connections>
                 </viewController>
