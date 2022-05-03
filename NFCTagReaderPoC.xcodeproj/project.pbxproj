@@ -22,11 +22,20 @@
 		E65EEAFA2816E4EE00054645 /* PayloadsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65EEAF92816E4EE00054645 /* PayloadsViewController.swift */; };
 		E65EEAFC281818C700054645 /* AppManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65EEAFB281818C500054645 /* AppManager.swift */; };
 		E6C431E128195D0C00EA2DE0 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6C431E028195D0B00EA2DE0 /* APIManager.swift */; };
+		E6C431F2281C553F00EA2DE0 /* new.pkpass in Resources */ = {isa = PBXBuildFile; fileRef = E6C431F1281C553F00EA2DE0 /* new.pkpass */; };
+		E6C431F6281EC59300EA2DE0 /* gpass.json in Resources */ = {isa = PBXBuildFile; fileRef = E6C431F5281EC59300EA2DE0 /* gpass.json */; };
+		E6C431FC28202D6100EA2DE0 /* WWDC.pkpass in Resources */ = {isa = PBXBuildFile; fileRef = E6C431FB28202D6100EA2DE0 /* WWDC.pkpass */; };
+		E6C431FE28202F2B00EA2DE0 /* Demo.pkpass in Resources */ = {isa = PBXBuildFile; fileRef = E6C431FD28202F2B00EA2DE0 /* Demo.pkpass */; };
+		E6C43205282055D700EA2DE0 /* Event.pkpass in Resources */ = {isa = PBXBuildFile; fileRef = E6C43200282055D600EA2DE0 /* Event.pkpass */; };
+		E6C43206282055D700EA2DE0 /* Coupon.pkpass in Resources */ = {isa = PBXBuildFile; fileRef = E6C43201282055D600EA2DE0 /* Coupon.pkpass */; };
+		E6C43207282055D700EA2DE0 /* StoreCard.pkpass in Resources */ = {isa = PBXBuildFile; fileRef = E6C43202282055D700EA2DE0 /* StoreCard.pkpass */; };
+		E6C43208282055D700EA2DE0 /* BoardingPass.pkpass in Resources */ = {isa = PBXBuildFile; fileRef = E6C43203282055D700EA2DE0 /* BoardingPass.pkpass */; };
+		E6C4320C28205B6000EA2DE0 /* Generic.pkpass in Resources */ = {isa = PBXBuildFile; fileRef = E6C4320B28205B6000EA2DE0 /* Generic.pkpass */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		E617367F281195B90012CDF2 /* NFCTagReaderPoC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NFCTagReaderPoC.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		E6173682281195B90012CDF2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		E6173682281195B90012CDF2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E6173684281195B90012CDF2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		E6173686281195B90012CDF2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		E6173689281195B90012CDF2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -43,6 +52,16 @@
 		E65EEAF92816E4EE00054645 /* PayloadsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayloadsViewController.swift; sourceTree = "<group>"; };
 		E65EEAFB281818C500054645 /* AppManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppManager.swift; sourceTree = "<group>"; };
 		E6C431E028195D0B00EA2DE0 /* APIManager.swift */ = {isa = PBXFileReference; indentWidth = 5; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; wrapsLines = 0; };
+		E6C431F1281C553F00EA2DE0 /* new.pkpass */ = {isa = PBXFileReference; lastKnownFileType = file; path = new.pkpass; sourceTree = "<group>"; };
+		E6C431F3281EC1FB00EA2DE0 /* pass.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = pass.json; sourceTree = "<group>"; };
+		E6C431F5281EC59300EA2DE0 /* gpass.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = gpass.json; sourceTree = "<group>"; };
+		E6C431FB28202D6100EA2DE0 /* WWDC.pkpass */ = {isa = PBXFileReference; lastKnownFileType = file; path = WWDC.pkpass; sourceTree = "<group>"; };
+		E6C431FD28202F2B00EA2DE0 /* Demo.pkpass */ = {isa = PBXFileReference; lastKnownFileType = file; path = Demo.pkpass; sourceTree = "<group>"; };
+		E6C43200282055D600EA2DE0 /* Event.pkpass */ = {isa = PBXFileReference; lastKnownFileType = file; path = Event.pkpass; sourceTree = "<group>"; };
+		E6C43201282055D600EA2DE0 /* Coupon.pkpass */ = {isa = PBXFileReference; lastKnownFileType = file; path = Coupon.pkpass; sourceTree = "<group>"; };
+		E6C43202282055D700EA2DE0 /* StoreCard.pkpass */ = {isa = PBXFileReference; lastKnownFileType = file; path = StoreCard.pkpass; sourceTree = "<group>"; };
+		E6C43203282055D700EA2DE0 /* BoardingPass.pkpass */ = {isa = PBXFileReference; lastKnownFileType = file; path = BoardingPass.pkpass; sourceTree = "<group>"; };
+		E6C4320B28205B6000EA2DE0 /* Generic.pkpass */ = {isa = PBXFileReference; lastKnownFileType = file; path = Generic.pkpass; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +96,7 @@
 		E6173681281195B90012CDF2 /* NFCTagReaderPoC */ = {
 			isa = PBXGroup;
 			children = (
+				E6C431E2281AB0B300EA2DE0 /* Pass */,
 				E617369C281196F80012CDF2 /* NFCTagReaderPoC.entitlements */,
 				E6C431E028195D0B00EA2DE0 /* APIManager.swift */,
 				E65EEAFB281818C500054645 /* AppManager.swift */,
@@ -103,6 +123,23 @@
 				E65EEAF22815675100054645 /* PassKit.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E6C431E2281AB0B300EA2DE0 /* Pass */ = {
+			isa = PBXGroup;
+			children = (
+				E6C4320B28205B6000EA2DE0 /* Generic.pkpass */,
+				E6C43203282055D700EA2DE0 /* BoardingPass.pkpass */,
+				E6C43201282055D600EA2DE0 /* Coupon.pkpass */,
+				E6C43200282055D600EA2DE0 /* Event.pkpass */,
+				E6C43202282055D700EA2DE0 /* StoreCard.pkpass */,
+				E6C431FD28202F2B00EA2DE0 /* Demo.pkpass */,
+				E6C431FB28202D6100EA2DE0 /* WWDC.pkpass */,
+				E6C431F5281EC59300EA2DE0 /* gpass.json */,
+				E6C431F3281EC1FB00EA2DE0 /* pass.json */,
+				E6C431F1281C553F00EA2DE0 /* new.pkpass */,
+			);
+			path = Pass;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -163,9 +200,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E6C43208282055D700EA2DE0 /* BoardingPass.pkpass in Resources */,
+				E6C431FC28202D6100EA2DE0 /* WWDC.pkpass in Resources */,
+				E6C43206282055D700EA2DE0 /* Coupon.pkpass in Resources */,
+				E6C431F6281EC59300EA2DE0 /* gpass.json in Resources */,
+				E6C4320C28205B6000EA2DE0 /* Generic.pkpass in Resources */,
 				E617368F281195BB0012CDF2 /* LaunchScreen.storyboard in Resources */,
+				E6C43207282055D700EA2DE0 /* StoreCard.pkpass in Resources */,
+				E6C431FE28202F2B00EA2DE0 /* Demo.pkpass in Resources */,
+				E6C431F2281C553F00EA2DE0 /* new.pkpass in Resources */,
 				E617368C281195BB0012CDF2 /* Assets.xcassets in Resources */,
 				E617368A281195B90012CDF2 /* Main.storyboard in Resources */,
+				E6C43205282055D700EA2DE0 /* Event.pkpass in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

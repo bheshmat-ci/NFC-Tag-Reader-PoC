@@ -129,6 +129,9 @@
                                 <buttonConfiguration key="configuration" style="filled" title="Generate PASS">
                                     <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="19"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="showGeneratedPass:" destination="1e1-sZ-d6y" eventType="touchUpInside" id="fXI-R7-0mw"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UAt-17-m4N">
                                 <rect key="frame" x="20" y="58" width="150" height="38"/>
