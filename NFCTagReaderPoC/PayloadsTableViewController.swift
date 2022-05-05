@@ -53,7 +53,9 @@ class PayloadsTableViewController: UITableViewController, NFCNDEFReaderSessionDe
         let payload = message.records[indexPath.row]
         
         switch payload.typeNameFormat {
+                
         case .nfcWellKnown:
+                
             if let type = String(data: payload.type, encoding: .utf8) {
                 if let url = payload.wellKnownTypeURIPayload() {
                     textLabel.text = "\(payload.typeNameFormat.description): \(type), \(url.absoluteString)"
@@ -61,6 +63,7 @@ class PayloadsTableViewController: UITableViewController, NFCNDEFReaderSessionDe
                     textLabel.text = "\(payload.typeNameFormat.description): \(type)"
                 }
             }
+                
         case .absoluteURI:
             if let text = String(data: payload.payload, encoding: .utf8) {
                 textLabel.text = text
@@ -112,6 +115,7 @@ class PayloadsTableViewController: UITableViewController, NFCNDEFReaderSessionDe
             }
             
             tag.queryNDEFStatus(completionHandler: { (ndefStatus: NFCNDEFStatus, capacity: Int, error: Error?) in
+                
                 guard error == nil else {
                     session.alertMessage = "Unable to query the NDEF status of tag."
                     session.invalidate()

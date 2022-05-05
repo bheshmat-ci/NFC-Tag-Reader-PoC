@@ -30,7 +30,7 @@
 		E6C43206282055D700EA2DE0 /* Coupon.pkpass in Resources */ = {isa = PBXBuildFile; fileRef = E6C43201282055D600EA2DE0 /* Coupon.pkpass */; };
 		E6C43207282055D700EA2DE0 /* StoreCard.pkpass in Resources */ = {isa = PBXBuildFile; fileRef = E6C43202282055D700EA2DE0 /* StoreCard.pkpass */; };
 		E6C43208282055D700EA2DE0 /* BoardingPass.pkpass in Resources */ = {isa = PBXBuildFile; fileRef = E6C43203282055D700EA2DE0 /* BoardingPass.pkpass */; };
-		E6C4320C28205B6000EA2DE0 /* Generic.pkpass in Resources */ = {isa = PBXBuildFile; fileRef = E6C4320B28205B6000EA2DE0 /* Generic.pkpass */; };
+		E6EB40F72823EE9000FCBEF6 /* Generic.pkpass in Resources */ = {isa = PBXBuildFile; fileRef = E6EB40F62823EE9000FCBEF6 /* Generic.pkpass */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,7 +49,7 @@
 		E617369F28142CB80012CDF2 /* PassKitHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassKitHelper.swift; sourceTree = "<group>"; };
 		E65EEAF22815675100054645 /* PassKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PassKit.framework; path = System/Library/Frameworks/PassKit.framework; sourceTree = SDKROOT; };
 		E65EEAF72815DA4700054645 /* PassLibrary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassLibrary.swift; sourceTree = "<group>"; };
-		E65EEAF92816E4EE00054645 /* PayloadsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayloadsViewController.swift; sourceTree = "<group>"; };
+		E65EEAF92816E4EE00054645 /* PayloadsViewController.swift */ = {isa = PBXFileReference; indentWidth = 5; lastKnownFileType = sourcecode.swift; path = PayloadsViewController.swift; sourceTree = "<group>"; };
 		E65EEAFB281818C500054645 /* AppManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppManager.swift; sourceTree = "<group>"; };
 		E6C431E028195D0B00EA2DE0 /* APIManager.swift */ = {isa = PBXFileReference; indentWidth = 5; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; wrapsLines = 0; };
 		E6C431F1281C553F00EA2DE0 /* new.pkpass */ = {isa = PBXFileReference; lastKnownFileType = file; path = new.pkpass; sourceTree = "<group>"; };
@@ -61,7 +61,7 @@
 		E6C43201282055D600EA2DE0 /* Coupon.pkpass */ = {isa = PBXFileReference; lastKnownFileType = file; path = Coupon.pkpass; sourceTree = "<group>"; };
 		E6C43202282055D700EA2DE0 /* StoreCard.pkpass */ = {isa = PBXFileReference; lastKnownFileType = file; path = StoreCard.pkpass; sourceTree = "<group>"; };
 		E6C43203282055D700EA2DE0 /* BoardingPass.pkpass */ = {isa = PBXFileReference; lastKnownFileType = file; path = BoardingPass.pkpass; sourceTree = "<group>"; };
-		E6C4320B28205B6000EA2DE0 /* Generic.pkpass */ = {isa = PBXFileReference; lastKnownFileType = file; path = Generic.pkpass; sourceTree = "<group>"; };
+		E6EB40F62823EE9000FCBEF6 /* Generic.pkpass */ = {isa = PBXFileReference; lastKnownFileType = file; path = Generic.pkpass; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,7 +128,7 @@
 		E6C431E2281AB0B300EA2DE0 /* Pass */ = {
 			isa = PBXGroup;
 			children = (
-				E6C4320B28205B6000EA2DE0 /* Generic.pkpass */,
+				E6EB40F62823EE9000FCBEF6 /* Generic.pkpass */,
 				E6C43203282055D700EA2DE0 /* BoardingPass.pkpass */,
 				E6C43201282055D600EA2DE0 /* Coupon.pkpass */,
 				E6C43200282055D600EA2DE0 /* Event.pkpass */,
@@ -204,7 +204,6 @@
 				E6C431FC28202D6100EA2DE0 /* WWDC.pkpass in Resources */,
 				E6C43206282055D700EA2DE0 /* Coupon.pkpass in Resources */,
 				E6C431F6281EC59300EA2DE0 /* gpass.json in Resources */,
-				E6C4320C28205B6000EA2DE0 /* Generic.pkpass in Resources */,
 				E617368F281195BB0012CDF2 /* LaunchScreen.storyboard in Resources */,
 				E6C43207282055D700EA2DE0 /* StoreCard.pkpass in Resources */,
 				E6C431FE28202F2B00EA2DE0 /* Demo.pkpass in Resources */,
@@ -212,6 +211,7 @@
 				E617368C281195BB0012CDF2 /* Assets.xcassets in Resources */,
 				E617368A281195B90012CDF2 /* Main.storyboard in Resources */,
 				E6C43205282055D700EA2DE0 /* Event.pkpass in Resources */,
+				E6EB40F72823EE9000FCBEF6 /* Generic.pkpass in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
