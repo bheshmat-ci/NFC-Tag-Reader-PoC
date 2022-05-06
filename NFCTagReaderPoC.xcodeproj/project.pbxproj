@@ -22,15 +22,9 @@
 		E65EEAFA2816E4EE00054645 /* PayloadsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65EEAF92816E4EE00054645 /* PayloadsViewController.swift */; };
 		E65EEAFC281818C700054645 /* AppManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65EEAFB281818C500054645 /* AppManager.swift */; };
 		E6C431E128195D0C00EA2DE0 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6C431E028195D0B00EA2DE0 /* APIManager.swift */; };
-		E6C431F2281C553F00EA2DE0 /* new.pkpass in Resources */ = {isa = PBXBuildFile; fileRef = E6C431F1281C553F00EA2DE0 /* new.pkpass */; };
-		E6C431F6281EC59300EA2DE0 /* gpass.json in Resources */ = {isa = PBXBuildFile; fileRef = E6C431F5281EC59300EA2DE0 /* gpass.json */; };
-		E6C431FC28202D6100EA2DE0 /* WWDC.pkpass in Resources */ = {isa = PBXBuildFile; fileRef = E6C431FB28202D6100EA2DE0 /* WWDC.pkpass */; };
-		E6C431FE28202F2B00EA2DE0 /* Demo.pkpass in Resources */ = {isa = PBXBuildFile; fileRef = E6C431FD28202F2B00EA2DE0 /* Demo.pkpass */; };
-		E6C43205282055D700EA2DE0 /* Event.pkpass in Resources */ = {isa = PBXBuildFile; fileRef = E6C43200282055D600EA2DE0 /* Event.pkpass */; };
 		E6C43206282055D700EA2DE0 /* Coupon.pkpass in Resources */ = {isa = PBXBuildFile; fileRef = E6C43201282055D600EA2DE0 /* Coupon.pkpass */; };
-		E6C43207282055D700EA2DE0 /* StoreCard.pkpass in Resources */ = {isa = PBXBuildFile; fileRef = E6C43202282055D700EA2DE0 /* StoreCard.pkpass */; };
 		E6C43208282055D700EA2DE0 /* BoardingPass.pkpass in Resources */ = {isa = PBXBuildFile; fileRef = E6C43203282055D700EA2DE0 /* BoardingPass.pkpass */; };
-		E6EB40F72823EE9000FCBEF6 /* Generic.pkpass in Resources */ = {isa = PBXBuildFile; fileRef = E6EB40F62823EE9000FCBEF6 /* Generic.pkpass */; };
+		E6EB40FF28257A2500FCBEF6 /* Generic.pkpass in Resources */ = {isa = PBXBuildFile; fileRef = E6EB40FE28257A2500FCBEF6 /* Generic.pkpass */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,16 +46,10 @@
 		E65EEAF92816E4EE00054645 /* PayloadsViewController.swift */ = {isa = PBXFileReference; indentWidth = 5; lastKnownFileType = sourcecode.swift; path = PayloadsViewController.swift; sourceTree = "<group>"; };
 		E65EEAFB281818C500054645 /* AppManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppManager.swift; sourceTree = "<group>"; };
 		E6C431E028195D0B00EA2DE0 /* APIManager.swift */ = {isa = PBXFileReference; indentWidth = 5; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; wrapsLines = 0; };
-		E6C431F1281C553F00EA2DE0 /* new.pkpass */ = {isa = PBXFileReference; lastKnownFileType = file; path = new.pkpass; sourceTree = "<group>"; };
 		E6C431F3281EC1FB00EA2DE0 /* pass.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = pass.json; sourceTree = "<group>"; };
-		E6C431F5281EC59300EA2DE0 /* gpass.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = gpass.json; sourceTree = "<group>"; };
-		E6C431FB28202D6100EA2DE0 /* WWDC.pkpass */ = {isa = PBXFileReference; lastKnownFileType = file; path = WWDC.pkpass; sourceTree = "<group>"; };
-		E6C431FD28202F2B00EA2DE0 /* Demo.pkpass */ = {isa = PBXFileReference; lastKnownFileType = file; path = Demo.pkpass; sourceTree = "<group>"; };
-		E6C43200282055D600EA2DE0 /* Event.pkpass */ = {isa = PBXFileReference; lastKnownFileType = file; path = Event.pkpass; sourceTree = "<group>"; };
 		E6C43201282055D600EA2DE0 /* Coupon.pkpass */ = {isa = PBXFileReference; lastKnownFileType = file; path = Coupon.pkpass; sourceTree = "<group>"; };
-		E6C43202282055D700EA2DE0 /* StoreCard.pkpass */ = {isa = PBXFileReference; lastKnownFileType = file; path = StoreCard.pkpass; sourceTree = "<group>"; };
 		E6C43203282055D700EA2DE0 /* BoardingPass.pkpass */ = {isa = PBXFileReference; lastKnownFileType = file; path = BoardingPass.pkpass; sourceTree = "<group>"; };
-		E6EB40F62823EE9000FCBEF6 /* Generic.pkpass */ = {isa = PBXFileReference; lastKnownFileType = file; path = Generic.pkpass; sourceTree = "<group>"; };
+		E6EB40FE28257A2500FCBEF6 /* Generic.pkpass */ = {isa = PBXFileReference; lastKnownFileType = file; path = Generic.pkpass; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,16 +116,10 @@
 		E6C431E2281AB0B300EA2DE0 /* Pass */ = {
 			isa = PBXGroup;
 			children = (
-				E6EB40F62823EE9000FCBEF6 /* Generic.pkpass */,
+				E6EB40FE28257A2500FCBEF6 /* Generic.pkpass */,
 				E6C43203282055D700EA2DE0 /* BoardingPass.pkpass */,
 				E6C43201282055D600EA2DE0 /* Coupon.pkpass */,
-				E6C43200282055D600EA2DE0 /* Event.pkpass */,
-				E6C43202282055D700EA2DE0 /* StoreCard.pkpass */,
-				E6C431FD28202F2B00EA2DE0 /* Demo.pkpass */,
-				E6C431FB28202D6100EA2DE0 /* WWDC.pkpass */,
-				E6C431F5281EC59300EA2DE0 /* gpass.json */,
 				E6C431F3281EC1FB00EA2DE0 /* pass.json */,
-				E6C431F1281C553F00EA2DE0 /* new.pkpass */,
 			);
 			path = Pass;
 			sourceTree = "<group>";
@@ -201,17 +183,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				E6C43208282055D700EA2DE0 /* BoardingPass.pkpass in Resources */,
-				E6C431FC28202D6100EA2DE0 /* WWDC.pkpass in Resources */,
 				E6C43206282055D700EA2DE0 /* Coupon.pkpass in Resources */,
-				E6C431F6281EC59300EA2DE0 /* gpass.json in Resources */,
 				E617368F281195BB0012CDF2 /* LaunchScreen.storyboard in Resources */,
-				E6C43207282055D700EA2DE0 /* StoreCard.pkpass in Resources */,
-				E6C431FE28202F2B00EA2DE0 /* Demo.pkpass in Resources */,
-				E6C431F2281C553F00EA2DE0 /* new.pkpass in Resources */,
 				E617368C281195BB0012CDF2 /* Assets.xcassets in Resources */,
 				E617368A281195B90012CDF2 /* Main.storyboard in Resources */,
-				E6C43205282055D700EA2DE0 /* Event.pkpass in Resources */,
-				E6EB40F72823EE9000FCBEF6 /* Generic.pkpass in Resources */,
+				E6EB40FF28257A2500FCBEF6 /* Generic.pkpass in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -380,9 +356,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = NFCTagReaderPoC/NFCTagReaderPoC.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 78X27C8U99;
+				DEVELOPMENT_TEAM = XHB9F28P8X;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = NFCTagReaderPoC/Info.plist;
 				INFOPLIST_KEY_NFCReaderUsageDescription = "NFC tag to read NDEF messages into the application";
@@ -397,8 +374,9 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.rtchubs.NFCTagReaderPoC;
+				PRODUCT_BUNDLE_IDENTIFIER = com.cardintegrators.badge;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -411,9 +389,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = NFCTagReaderPoC/NFCTagReaderPoC.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 78X27C8U99;
+				DEVELOPMENT_TEAM = XHB9F28P8X;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = NFCTagReaderPoC/Info.plist;
 				INFOPLIST_KEY_NFCReaderUsageDescription = "NFC tag to read NDEF messages into the application";
@@ -428,8 +407,9 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.rtchubs.NFCTagReaderPoC;
+				PRODUCT_BUNDLE_IDENTIFIER = com.cardintegrators.badge;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
